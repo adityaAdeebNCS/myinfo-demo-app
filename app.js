@@ -85,11 +85,6 @@ app.post('/getPersonData', function (req, res, next) {
     var authCode = req.body.authCode;
     var state = req.body.state;
     var txnNo = crypto.randomBytes(10).toString("hex");
-
-    // console.log("> AuthCode   : ", authCode);
-    // console.log("> State      : ", state);
-    // console.log("> txnNo      : ", txnNo);
-
     let connector = new MyInfoConnector(config.MYINFO_CONNECTOR_CONFIG);
     console.log("Calling MyInfo NodeJs Library...".green);
 
@@ -109,7 +104,7 @@ app.post('/getPersonData', function (req, res, next) {
         console.log(error);
         res.status(500).send({
           "error": error
-        });
+        });    
       });
   } catch (error) {
     console.log("Error".red, error);

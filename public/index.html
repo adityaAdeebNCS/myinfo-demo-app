@@ -106,7 +106,7 @@
 				type: "POST", // post to server side
 				success: function (result) {
 					// console.log("result",result);
-					prefillForm(result);
+					prefillForm(result);	
 				},
 				error: function (result) {
 					alert("ERROR:" + JSON.stringify(result.responseJSON.error));
@@ -209,9 +209,9 @@
 							<a href="#" onclick="$(this).closest('form').submit()" class="btn2">Retrieve MyInfo</a>
 						</form>
 						<hr>
-						<small>Note: refer to the <a href="https://www.ndi-api.gov.sg/library/myinfo/resources-personas"
+						<!-- <small>Note: refer to the <a href="https://www.ndi-api.gov.sg/library/myinfo/resources-personas"
 								target="_BLANK">Personas</a> on the NDI Developer and Partner Portal for the test
-							accounts to be used.</small>
+							accounts to be used.</small> -->
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 d-flex align-items-center full-screen-height mobile-hidden">
@@ -340,9 +340,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-12 text-center">
+					<!-- <div class="col-md-12 text-center">
 						<a href="#" class="btn2">Submit Application</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</form>
